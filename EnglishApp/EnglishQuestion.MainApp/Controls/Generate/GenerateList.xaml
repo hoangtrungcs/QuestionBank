@@ -1,0 +1,83 @@
+﻿<UserControl
+    x:Class="EnglishQuestion.MainApp.Controls.Generate.GenerateList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+    lex:ResxLocalizationProvider.DefaultDictionary="MainResource"
+    xmlns:extend="clr-namespace:HtmlEditorExtend.Views;assembly=HtmlEditorExtend"
+    Loaded="OnLoaded">
+    <UserControl.Resources>
+        <DataTemplate x:Key="SubTestType">
+            <TextBlock Text="{Binding Value}" />
+        </DataTemplate>
+        <HierarchicalDataTemplate x:Key="SubTest" ItemTemplate="{StaticResource SubTestType}" ItemsSource="{Binding SubTestTypes}">
+            <TextBlock Text="{Binding Name}" />
+        </HierarchicalDataTemplate>
+        <HierarchicalDataTemplate x:Key="Test" ItemTemplate="{StaticResource SubTest}" ItemsSource="{Binding SubTests}">
+            <TextBlock Text="{Binding Name}" />
+        </HierarchicalDataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <telerik:GroupBox Header="{lex:Loc TestList}" Grid.Column="0" BorderBrush="CadetBlue">
+            <StackPanel Orientation="Vertical">
+                <telerik:RadWatermarkTextBox WatermarkContent="{lex:Loc Search}" Margin="5"/>
+                <telerik:RadTreeView ItemsSource="{Binding ItemsSource}" Name="trvTest"
+                                     ItemTemplate="{StaticResource Test}"
+                                     SelectionChanged="OnSelectionChanged"/>
+            </StackPanel>
+        </telerik:GroupBox>
+        <telerik:GroupBox Header="{lex:Loc TestInfo}" Grid.Column="2" BorderBrush="CadetBlue" Name="groupInfo" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="{lex:Loc TestInfoName}"/>
+                <TextBlock Grid.Column="2" Grid.Row="0" Text="{Binding Name}"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="{lex:Loc TestInfoClass}"/>
+                <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding ClassName}"/>
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="{lex:Loc TestInfoLevel}"/>
+                <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding Level}"/>
+                <TextBlock Grid.Column="0" Grid.Row="3" Text="{lex:Loc TestInfoPurpose}"/>
+                <TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding Purpose}"/>
+                <TextBlock Grid.Column="0" Grid.Row="4" Text="{lex:Loc TestInfoTotalTime}"/>
+                <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding TotalTimeDisplay}"/>
+                <TextBlock Grid.Column="0" Grid.Row="5" Text="{lex:Loc TestInfoTotalQuestion}"/>
+                <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding TotalQuestion}"/>
+                <TextBlock Grid.Column="0" Grid.Row="6" Text="{lex:Loc TestInfoNumOfSubTest}"/>
+                <TextBlock Grid.Column="2" Grid.Row="6" Text="{Binding NumOfSubTest}"/>
+                <TextBlock Grid.Column="0" Grid.Row="7" Text="{lex:Loc TestInfoTestDate}"/>
+                <TextBlock Grid.Column="2" Grid.Row="7" Text="{Binding TestDateDisplay}"/>
+            </Grid>
+        </telerik:GroupBox>
+        <telerik:GroupBox Header="{lex:Loc TestContent}" Grid.Column="2" BorderBrush="CadetBlue" Name="groupEditor" Visibility="Collapsed" Width="21cm">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <extend:HtmlEditor x:Name="editor" DocumentReady="Editor_OnDocumentReady" Grid.Row="0"/>
+                <telerik:RadButton Margin="5" Content="{lex:Loc ViewResult}" Grid.Row="1" HorizontalAlignment="Right" Click="OnViewResultClick"/>
+            </Grid>
+        </telerik:GroupBox>
+    </Grid>
+</UserControl>

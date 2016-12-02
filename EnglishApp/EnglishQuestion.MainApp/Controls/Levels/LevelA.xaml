@@ -1,0 +1,36 @@
+﻿<base:LevelBasePage x:Class="EnglishQuestion.MainApp.Controls.Levels.LevelA"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:wpfPageTransitions="clr-namespace:WpfPageTransitions;assembly=WpfPageTransitions"
+             xmlns:base="clr-namespace:EnglishQuestion.MainApp.Controls.Levels"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+             lex:ResxLocalizationProvider.DefaultDictionary="MainResource">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Background="#E0E7FF">
+            <telerik:RadExpander Header="{lex:Loc Writing}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Padding="0,5,0,5">
+                <StackPanel Orientation="Vertical">
+                    <telerik:RadRadioButton Tag="AR1" Content="{lex:Loc ARSection1}" Background="White" BorderBrush="Black" BorderThickness="1" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ARToolTip1}"/>
+                    <telerik:RadRadioButton Tag="AR2" Content="{lex:Loc ARSection2}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ARToolTip2}"/>
+                    <telerik:RadRadioButton Tag="AR3" Content="{lex:Loc ARSection3}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ARToolTip3}"/>
+                    <telerik:RadRadioButton Tag="AR4A" Content="{lex:Loc ARSection4A}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ARToolTip4A}"/>
+                    <telerik:RadRadioButton Tag="AR4B" Content="{lex:Loc ARSection4B}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ARToolTip4B}"/>
+                </StackPanel>
+            </telerik:RadExpander>
+            <telerik:RadExpander Header="{lex:Loc Listening}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Padding="0,5,0,5">
+                <StackPanel Orientation="Vertical">
+                    <telerik:RadRadioButton Tag="AL1" Content="{lex:Loc ALSection1}" Background="White" BorderBrush="Black" BorderThickness="1" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ALToolTip1}"/>
+                    <telerik:RadRadioButton Tag="AL2" Content="{lex:Loc ALSection2}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ALToolTip2}"/>
+                    <telerik:RadRadioButton Tag="AL3" Content="{lex:Loc ALSection3}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelA" Checked="OnSectionChecked" ToolTip="{lex:Loc ALToolTip3}"/>
+                </StackPanel>
+            </telerik:RadExpander>
+        </StackPanel>
+        <wpfPageTransitions:PageTransition Grid.Column="1" x:Name="pageTransition" TransitionType="Fade"/>
+    </Grid>
+</base:LevelBasePage>

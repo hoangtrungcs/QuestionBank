@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnglishQuestion.MainApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AudioFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\</Value>
+    </Setting>
+    <Setting Name="LicenseFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\\HoangTrung\\Cmard2\\QuestionBank\\NganHangDeThi\\NganHangDeThi\\bin\\Debug\\key.ini</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

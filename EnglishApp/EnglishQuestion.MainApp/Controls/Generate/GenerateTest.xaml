@@ -1,0 +1,10 @@
+﻿<telerik:RadWindow x:Class="EnglishQuestion.MainApp.Controls.Generate.GenerateTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:generate="clr-namespace:EnglishQuestion.MainApp.Controls.Generate"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <generate:GenerateContainer x:Name="container"/>
+    </Grid>
+</telerik:RadWindow>

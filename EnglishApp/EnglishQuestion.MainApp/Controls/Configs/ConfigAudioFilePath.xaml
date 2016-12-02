@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="EnglishQuestion.MainApp.Controls.Configs.ConfigAudioFilePath"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+             lex:ResxLocalizationProvider.DefaultDictionary="MainResource">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="{lex:Loc AudioPath}" Margin="5"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Name="txtAudioPath" IsReadOnly="True"/>
+        <telerik:RadButton Grid.Column="2" Grid.Row="0" Content=" ... " Margin="-2,0,0,0" Click="OnBrowseAudioPath"/>
+        <telerik:RadButton Name="btnSave" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" ContentTemplate="{StaticResource AcceptButton}" Click="OnSaveAudioPath"/>
+    </Grid>
+</UserControl>

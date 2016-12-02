@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="AudioFileNotFound" xml:space="preserve">
+    <value>Cannot find the audio file. Please check setting audio directory!</value>
+  </data>
+  <data name="AudioPathEmptyMessage" xml:space="preserve">
+    <value>Audio files path cannot empty</value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="B1" xml:space="preserve">
+    <value>B1</value>
+  </data>
+  <data name="B2" xml:space="preserve">
+    <value>B2</value>
+  </data>
+  <data name="C" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Competition" xml:space="preserve">
+    <value>Competition</value>
+  </data>
+  <data name="ConfirmCaption" xml:space="preserve">
+    <value>#Confirm#</value>
+  </data>
+  <data name="ConfirmDeleteMessage" xml:space="preserve">
+    <value>Do you want to delete item?</value>
+  </data>
+  <data name="CreateAudioDirectoryMessage" xml:space="preserve">
+    <value>The setting audio directory is not found, Do you want to create and copy the audio file to?</value>
+  </data>
+  <data name="DateDiffTime" xml:space="preserve">
+    <value>The bias between total time: {0} and real time: {1} is so much ({2} minute), Do you agree and continue?</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Delete item</value>
+  </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="EditItem" xml:space="preserve">
+    <value>Edit item</value>
+  </data>
+  <data name="ErrorCaption" xml:space="preserve">
+    <value>#Error#</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="Guide" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="GuideA" xml:space="preserve">
+    <value>Guide A</value>
+  </data>
+  <data name="GuideB" xml:space="preserve">
+    <value>Guide B</value>
+  </data>
+  <data name="GuideB1" xml:space="preserve">
+    <value>Guide B1</value>
+  </data>
+  <data name="GuideB2" xml:space="preserve">
+    <value>Guide B2</value>
+  </data>
+  <data name="GuideC" xml:space="preserve">
+    <value>Guide C</value>
+  </data>
+  <data name="Hard" xml:space="preserve">
+    <value>Hard</value>
+  </data>
+  <data name="HtmlFilter" xml:space="preserve">
+    <value>txt files (*.htm)|*.htm|All files (*.html)|*.html</value>
+  </data>
+  <data name="ImageFilter" xml:space="preserve">
+    <value>jpg files (*.jpg)|*.jpg|All files (*.png.*)|*.png|All files (*.gif)|*.gif|All files (*.*)|*.*</value>
+  </data>
+  <data name="InfoCaption" xml:space="preserve">
+    <value>#Info#</value>
+  </data>
+  <data name="LevelAWritingHeader" xml:space="preserve">
+    <value>&lt;br/&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=5&gt;ĐỀ {0}&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;br/&gt;
+&lt;HR/&gt;
+&lt;P&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD width="48%"&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Department of Education &amp;amp; Trainning&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Ho Chi Minh City&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;/TD&gt;
+&lt;TD width="15%"&gt;&lt;/TD&gt;
+&lt;TD width="32%"&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Level: ELEMENTARY&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Date: {1}&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Time allotted: {2} minutes&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/P&gt;
+&lt;br/&gt;</value>
+  </data>
+  <data name="LevelBWritingHeader" xml:space="preserve">
+    <value>&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;ĐỀ THI NÂNG NGẠCH&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P align=center&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;TỪ CHUYÊN VIÊN LÊN CHUYÊN VIÊN CHÍNH&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P align=center&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P align=center&gt;Thời gian: {0}&lt;/P&gt;
+&lt;P align=center&gt;{1}&lt;/P&gt;
+&lt;P align=left&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P align=left&gt;&amp;nbsp;&lt;/P&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P&gt;Họ và tên: .......................................................&lt;/P&gt;
+&lt;P&gt;Ngày sinh: .......................................................&lt;/P&gt;
+&lt;P&gt;Nơi sinh: ..........................................................&lt;/P&gt;
+&lt;P&gt;Ngày thi: ..........................................................&lt;/P&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width=150 border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;Số báo danh&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Chữ ký giám thị 1&lt;/P&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Chữ ký giám thị 2&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Số phách&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;HR/&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Điểm bằng số&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Điểm bằng chữ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Số phách&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Chữ ký giám khảo 1&lt;/P&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=1&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;P align=center&gt;Chữ ký giám khảo 2&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;</value>
+  </data>
+  <data name="LevelCHeader" xml:space="preserve">
+    <value>&lt;P&gt;
+&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD width="50%"&gt;
+&lt;P align=center&gt;&lt;FONT size=4&gt;Institute of Formation and Promotion&lt;/FONT&gt;&lt;/P&gt;
+&lt;P align=center&gt;&lt;FONT size=4&gt;Ho Chi Minh City&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+&lt;TD width="15%"&gt;&lt;/TD&gt;
+&lt;TD width="30%"&gt;
+&lt;P&gt;&lt;FONT size=4&gt;Level: &lt;STRONG&gt;Advance&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/P&gt;
+&lt;P&gt;&lt;FONT size=4&gt;Date of Testing: {0}&lt;/FONT&gt;&lt;/P&gt;
+&lt;P&gt;&lt;FONT size=4&gt;Time allotted: {1}&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;</value>
+  </data>
+  <data name="LevelNotFound" xml:space="preserve">
+    <value>Test level not found</value>
+  </data>
+  <data name="NewHtml" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;English Test&lt;/TITLE&gt;
+&lt;META content="text/html; charset=ISO-8859-1" http-equiv=content-type&gt;
+&lt;STYLE type=text/css&gt;
+p {
+margin-bottom: 10;
+margin-top: 10;
+}
+&lt;/STYLE&gt;
+
+&lt;META name=GENERATOR content="MSHTML 11.00.9600.17963"&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NoSelectedQuestion" xml:space="preserve">
+    <value>No question is selected</value>
+  </data>
+  <data name="NotEnoughQuestion" xml:space="preserve">
+    <value>Not enough question to generate</value>
+  </data>
+  <data name="NumOfSubTestGreaterThan0" xml:space="preserve">
+    <value>Subs test must greater than 0</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenAudioPath" xml:space="preserve">
+    <value>Open audio folder path</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="SectionNotFound" xml:space="preserve">
+    <value>Section not found</value>
+  </data>
+  <data name="SettingDefaultAudioFilePath" xml:space="preserve">
+    <value>C:/</value>
+  </data>
+  <data name="SubTest" xml:space="preserve">
+    <value>SubTest</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Successful</value>
+  </data>
+  <data name="SussessCaption" xml:space="preserve">
+    <value>#Success#</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="TextFilter" xml:space="preserve">
+    <value>txt files (*.txt)|*.txt|All files (*.*)|*.*</value>
+  </data>
+  <data name="WarningCaption" xml:space="preserve">
+    <value>#Warning#</value>
+  </data>
+  <data name="CannotSelectEmptyAnswer" xml:space="preserve">
+    <value>Cannot select empty answer</value>
+  </data>
+  <data name="EmptyContent" xml:space="preserve">
+    <value>Question {0} has empty content/Title</value>
+  </data>
+  <data name="PopupQuestionEmpty" xml:space="preserve">
+    <value>Question cannot empty</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Do you want to delete?</value>
+  </data>
+  <data name="CannotDelete" xml:space="preserve">
+    <value>Cannot delete question when number of question less than number question in paragraph</value>
+  </data>
+  <data name="ConfigExisted" xml:space="preserve">
+    <value>Config key is already existed</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="KeyValueNotEmpty" xml:space="preserve">
+    <value>Key and value cannot empty</value>
+  </data>
+  <data name="Listening" xml:space="preserve">
+    <value>Listening</value>
+  </data>
+  <data name="Writing" xml:space="preserve">
+    <value>Writing</value>
+  </data>
+  <data name="LevelAListeningHeader" xml:space="preserve">
+    <value>&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD width="48%"&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Department of Education &amp;amp; Trainning&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Ho Chi Minh City&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;HR/&gt;
+&lt;/TD&gt;
+&lt;TD width="15%"&gt;&lt;/TD&gt;
+&lt;TD width="32%"&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Level: ELEMENTARY&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;LISTENING TEST&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Date: {0}&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;</value>
+  </data>
+  <data name="LevelBListeningHeader" xml:space="preserve">
+    <value>&lt;TABLE title="" height=100 cellSpacing=0 width="95%" border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD width="50%"&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Department of Education &amp;amp; Trainning&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Ho Chi Minh City&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;HR/&gt;
+&lt;/TD&gt;
+&lt;TD width="15%"&gt;&lt;/TD&gt;
+&lt;TD width="30%"&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Level: ELEMENTARY&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;LISTENING TEST&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;FONT size=4&gt;Date: {0}&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;</value>
+  </data>
+  <data name="MustChooseAnswer" xml:space="preserve">
+    <value>You have to choose an correct answer</value>
+  </data>
+  <data name="NotSelectedSubTest" xml:space="preserve">
+    <value>You have to select test content to save</value>
+  </data>
+  <data name="LicenseFailMessage" xml:space="preserve">
+    <value>License key is not correct, please contact with admin to receive the key</value>
+  </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Register success</value>
+  </data>
+</root>

@@ -1,0 +1,35 @@
+﻿<base:GenerateBasePage
+    x:Class="EnglishQuestion.MainApp.Controls.Generate.GenerateLevelA"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+    lex:ResxLocalizationProvider.DefaultDictionary="MainResource"
+    xmlns:base="clr-namespace:EnglishQuestion.MainApp.Controls.Generate"
+    Width="820" Height="600">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="New" CanExecute="CommandBinding_OnCanExecute" Executed="CommandBinding_OnExecuted"/>
+    </UserControl.CommandBindings>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical"  Width="800">
+            <telerik:RadExpander Header="{lex:Loc Writing}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Margin="5">
+                <telerik:RadTileView RowHeight="175" ColumnsCount="2" IsAutoScrollingEnabled="True">
+                    <telerik:RadTileViewItem Header="{lex:Loc ARSection1}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[0]}"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ARSection2}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[1]}"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ARSection3}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[2]}"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ARSection4A}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[3]}" Name="section4A"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ARSection4B}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[4]}" Name="section4B"/>
+                </telerik:RadTileView>
+            </telerik:RadExpander>
+            <telerik:RadExpander Header="{lex:Loc Listening}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Margin="5,0,5,5" Name="groupListening">
+                <telerik:RadTileView RowHeight="175" ColumnsCount="2" IsAutoScrollingEnabled="True">
+                    <telerik:RadTileViewItem Header="{lex:Loc ALSection1}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[5]}"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ALSection2}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[6]}"/>
+                    <telerik:RadTileViewItem Header="{lex:Loc ALSection3}" Content="{Binding}" ContentTemplate="{StaticResource SectionTemplate}" DataContext="{Binding ConfigLevels[7]}"/>
+                </telerik:RadTileView>
+            </telerik:RadExpander>
+        </StackPanel>
+    </ScrollViewer>
+</base:GenerateBasePage>

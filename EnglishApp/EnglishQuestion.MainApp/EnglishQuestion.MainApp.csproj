@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnglishQuestion.MainApp</RootNamespace>
+    <AssemblyName>EnglishQuestion.MainApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mainicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf">
+      <HintPath>..\..\..\Dlls\Telerik 2015\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFLocalizeExtension">
+      <HintPath>..\packages\WpfLocalizeExtension.2.3.2\lib\net35\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WpfPageTransitions">
+      <HintPath>..\Dlls\WpfPageTransitions.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions">
+      <HintPath>..\packages\XAMLMarkupExtensions.1.2.1.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controls\Blank.xaml.cs">
+      <DependentUpon>Blank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ComposeBasePage.cs" />
+    <Compile Include="Controls\Compose\IComposeBase.cs" />
+    <Compile Include="Controls\Compose\Listening1QA.xaml.cs">
+      <DependentUpon>Listening1QA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ListeningQA.xaml.cs">
+      <DependentUpon>ListeningQA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ReadingPAB1B2.xaml.cs">
+      <DependentUpon>ReadingPAB1B2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ReadingPA.xaml.cs">
+      <DependentUpon>ReadingPA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ReadingPQAB1B2.xaml.cs">
+      <DependentUpon>ReadingPQAB1B2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ReadingPQA.xaml.cs">
+      <DependentUpon>ReadingPQA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\ReadingQA.xaml.cs">
+      <DependentUpon>ReadingQA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\WritingPA.xaml.cs">
+      <DependentUpon>WritingPA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose\WritingQA.xaml.cs">
+      <DependentUpon>WritingQA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Configs\ConfigTestB1B2.xaml.cs">
+      <DependentUpon>ConfigTestB1B2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Configs\ConfigAudioFilePath.xaml.cs">
+      <DependentUpon>ConfigAudioFilePath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateBasePage.cs" />
+    <Compile Include="Controls\Generate\GenerateContainer.xaml.cs">
+      <DependentUpon>GenerateContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateLevelB2.xaml.cs">
+      <DependentUpon>GenerateLevelB2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateLevelB1.xaml.cs">
+      <DependentUpon>GenerateLevelB1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateLevelC.xaml.cs">
+      <DependentUpon>GenerateLevelC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateLevelB.xaml.cs">
+      <DependentUpon>GenerateLevelB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateLevelA.xaml.cs">
+      <DependentUpon>GenerateLevelA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateList.xaml.cs">
+      <DependentUpon>GenerateList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\GenerateTest.xaml.cs">
+      <DependentUpon>GenerateTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Generate\IGenerateBase.cs" />
+    <Compile Include="Controls\IControlBase.cs" />
+    <Compile Include="Controls\Levels\ILevelBase.cs" />
+    <Compile Include="Controls\Levels\LevelB2.xaml.cs">
+      <DependentUpon>LevelB2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Levels\LevelB1.xaml.cs">
+      <DependentUpon>LevelB1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Levels\LevelBasePage.cs" />
+    <Compile Include="Controls\Levels\LevelC.xaml.cs">
+      <DependentUpon>LevelC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Levels\LevelB.xaml.cs">
+      <DependentUpon>LevelB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Levels\LevelA.xaml.cs">
+      <DependentUpon>LevelA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUp\AddEditListeningQuestion.xaml.cs">
+      <DependentUpon>AddEditListeningQuestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUp\AddEditQuestionAnswer.xaml.cs">
+      <DependentUpon>AddEditQuestionAnswer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUp\SelectQuestionManual.xaml.cs">
+      <DependentUpon>SelectQuestionManual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Register\LicenseAgreement.xaml.cs">
+      <DependentUpon>LicenseAgreement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ConvertSubTypeToBoolean.cs" />
+    <Compile Include="HtmlEditor\HtmlEditor.xaml.cs">
+      <DependentUpon>HtmlEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelerikMessageBox\RadMessageBox.xaml.cs">
+      <DependentUpon>RadMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\GenerateHelper.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+    <Compile Include="ViewModels\AddEditQuestionAnswerViewModel.cs" />
+    <Compile Include="ViewModels\B1B2ConfigVm.cs" />
+    <Compile Include="ViewModels\BaseVM.cs" />
+    <Compile Include="ViewModels\GenerateBaseVM.cs" />
+    <Compile Include="ViewModels\HtmlEditorVM.cs" />
+    <Compile Include="ViewModels\ListeningQAVM.cs" />
+    <Compile Include="ViewModels\ReadingPQAVM.cs" />
+    <Compile Include="ViewModels\TestListVM.cs" />
+    <Compile Include="ViewModels\WritingQAVM.cs" />
+    <Compile Include="ViewModels\ReadingQAVM.cs" />
+    <Compile Include="ViewModels\SearchBaseVM.cs" />
+    <Page Include="Controls\Blank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\Listening1QA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Compose\ListeningQA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\ReadingPAB1B2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Compose\ReadingPA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\ReadingPQAB1B2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Compose\ReadingPQA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\ReadingQA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\WritingPA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compose\WritingQA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Configs\ConfigTestB1B2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Configs\ConfigAudioFilePath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Generate\GenerateContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Generate\GenerateLevelB2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Generate\GenerateLevelB1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Generate\GenerateLevelC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Generate\GenerateLevelB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Generate\GenerateLevelA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Generate\GenerateList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Generate\GenerateTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Levels\LevelB2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Levels\LevelB1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Levels\LevelC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Levels\LevelB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Levels\LevelA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PopUp\AddEditListeningQuestion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PopUp\AddEditQuestionAnswer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PopUp\SelectQuestionManual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Register\LicenseAgreement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HtmlEditor\HtmlEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Resource Include="Themes\System.Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Themes\Telerik.Windows.Controls.Input.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Themes\Telerik.Windows.Controls.Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Themes\Telerik.Windows.Controls.Docking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Page Include="TelerikMessageBox\RadMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Telerik.Windows.Controls.RibbonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Resource Include="Themes\Telerik.Windows.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="MainResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnglishQuestion.AppCommon\EnglishQuestion.AppCommon.csproj">
+      <Project>{22d31508-803a-4f8d-97d2-73f7d6a0a451}</Project>
+      <Name>EnglishQuestion.AppCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnglishQuestion.Common\EnglishQuestion.Common.csproj">
+      <Project>{46199cee-2a83-40e5-8aa6-41662d313ac7}</Project>
+      <Name>EnglishQuestion.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnglishQuestion.Entity\EnglishQuestion.Entity.csproj">
+      <Project>{063c4305-071c-4d16-a264-9f39ffde3e42}</Project>
+      <Name>EnglishQuestion.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnglishQuestion.LocalizeResource\EnglishQuestion.LocalizeResource.csproj">
+      <Project>{2b45077c-0a80-4f92-94de-c161d4cbc3ec}</Project>
+      <Name>EnglishQuestion.LocalizeResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnglishQuestion.Service\EnglishQuestion.Service.csproj">
+      <Project>{f22084af-883c-4500-8282-2a5cdf4c8c2c}</Project>
+      <Name>EnglishQuestion.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlEditorExtend\HtmlEditorExtend.csproj">
+      <Project>{e8b1aa27-5957-44c0-8aac-22fb06803a7a}</Project>
+      <Name>HtmlEditorExtend</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowMediaPayerWrapper\WindowMediaPayerWrapper.csproj">
+      <Project>{e990ccb3-ec51-4d46-9f1c-5910c6aceea5}</Project>
+      <Name>WindowMediaPayerWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\EnglishQuestionDb.sdf" />
+    <Resource Include="mainicon.ico" />
+    <Resource Include="Images\mainicon.ico" />
+    <Resource Include="Images\save.png" />
+    <None Include="smithhtmleditor.config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="smithhtmleditor.stylesheet.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\editor\backcolor.png" />
+    <Resource Include="Images\editor\bold.png" />
+    <Resource Include="Images\editor\bullets.png" />
+    <Resource Include="Images\editor\cancel.png" />
+    <Resource Include="Images\editor\center.png" />
+    <Resource Include="Images\editor\center2.png" />
+    <Resource Include="Images\editor\Color.png" />
+    <Resource Include="Images\editor\Editor.png" />
+    <Resource Include="Images\editor\folder.png" />
+    <Resource Include="Images\editor\html.png" />
+    <Resource Include="Images\editor\ident.png" />
+    <Resource Include="Images\editor\image.png" />
+    <Resource Include="Images\editor\italic.png" />
+    <Resource Include="Images\editor\LeftAlign.png" />
+    <Resource Include="Images\editor\link.png" />
+    <Content Include="Images\editor\New.html" />
+    <Resource Include="Images\editor\new.png" />
+    <Resource Include="Images\editor\Numbered.png" />
+    <Resource Include="Images\editor\ok.png" />
+    <Resource Include="Images\editor\open.png" />
+    <Resource Include="Images\editor\OutIdent.png" />
+    <Resource Include="Images\editor\RightAlign.png" />
+    <Resource Include="Images\editor\save.png" />
+    <Resource Include="Images\editor\UnderLine.png" />
+    <Resource Include="Images\editor\view.png" />
+    <Resource Include="Images\editor\web.png" />
+    <Resource Include="Images\accept.png" />
+    <Resource Include="Images\asterisk.png" />
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\exclamation.png" />
+    <Resource Include="Images\hand.png" />
+    <Resource Include="Images\information.png" />
+    <Resource Include="Images\none.png" />
+    <Resource Include="Images\question.png" />
+    <Resource Include="Images\stop.png" />
+    <Resource Include="Images\Warning.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\remove.png" />
+    <Resource Include="Images\small\action_add.png" />
+    <Resource Include="Images\small\action_cancel.png" />
+    <Resource Include="Images\small\action_delete.png" />
+    <Resource Include="Images\small\action_save.png" />
+    <Resource Include="Images\small\close_current_page.png" />
+    <Resource Include="Images\RQA.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

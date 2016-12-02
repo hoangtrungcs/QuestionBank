@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.MainApp", "EnglishQuestion.MainApp\EnglishQuestion.MainApp.csproj", "{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.Common", "EnglishQuestion.Common\EnglishQuestion.Common.csproj", "{46199CEE-2A83-40E5-8AA6-41662D313AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.Entity", "EnglishQuestion.Entity\EnglishQuestion.Entity.csproj", "{063C4305-071C-4D16-A264-9F39FFDE3E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.Service", "EnglishQuestion.Service\EnglishQuestion.Service.csproj", "{F22084AF-883C-4500-8282-2A5CDF4C8C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.AppCommon", "EnglishQuestion.AppCommon\EnglishQuestion.AppCommon.csproj", "{22D31508-803A-4F8D-97D2-73F7D6A0A451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishQuestion.LocalizeResource", "EnglishQuestion.LocalizeResource\EnglishQuestion.LocalizeResource.csproj", "{2B45077C-0A80-4F92-94DE-C161D4CBC3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlEditorExtend", "HtmlEditorExtend\HtmlEditorExtend.csproj", "{E8B1AA27-5957-44C0-8AAC-22FB06803A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowMediaPayerWrapper", "WindowMediaPayerWrapper\WindowMediaPayerWrapper.csproj", "{E990CCB3-EC51-4D46-9F1C-5910C6ACEEA5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://leetrung.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EnglishQuestion.AppCommon\\EnglishQuestion.AppCommon.csproj
+		SccProjectName1 = EnglishQuestion.AppCommon
+		SccLocalPath1 = EnglishQuestion.AppCommon
+		SccProjectUniqueName2 = EnglishQuestion.Common\\EnglishQuestion.Common.csproj
+		SccProjectName2 = EnglishQuestion.Common
+		SccLocalPath2 = EnglishQuestion.Common
+		SccProjectUniqueName3 = EnglishQuestion.Entity\\EnglishQuestion.Entity.csproj
+		SccProjectName3 = EnglishQuestion.Entity
+		SccLocalPath3 = EnglishQuestion.Entity
+		SccProjectUniqueName4 = EnglishQuestion.LocalizeResource\\EnglishQuestion.LocalizeResource.csproj
+		SccProjectName4 = EnglishQuestion.LocalizeResource
+		SccLocalPath4 = EnglishQuestion.LocalizeResource
+		SccProjectUniqueName5 = EnglishQuestion.MainApp\\EnglishQuestion.MainApp.csproj
+		SccProjectName5 = EnglishQuestion.MainApp
+		SccLocalPath5 = EnglishQuestion.MainApp
+		SccProjectUniqueName6 = EnglishQuestion.Service\\EnglishQuestion.Service.csproj
+		SccProjectName6 = EnglishQuestion.Service
+		SccLocalPath6 = EnglishQuestion.Service
+		SccProjectUniqueName7 = HtmlEditorExtend\\HtmlEditorExtend.csproj
+		SccProjectName7 = HtmlEditorExtend
+		SccLocalPath7 = HtmlEditorExtend
+		SccProjectUniqueName8 = WindowMediaPayerWrapper\\WindowMediaPayerWrapper.csproj
+		SccProjectName8 = WindowMediaPayerWrapper
+		SccLocalPath8 = WindowMediaPayerWrapper
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDEFA7B-5B9B-4964-9A47-5CD0C0B04A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46199CEE-2A83-40E5-8AA6-41662D313AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46199CEE-2A83-40E5-8AA6-41662D313AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46199CEE-2A83-40E5-8AA6-41662D313AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46199CEE-2A83-40E5-8AA6-41662D313AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063C4305-071C-4D16-A264-9F39FFDE3E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063C4305-071C-4D16-A264-9F39FFDE3E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063C4305-071C-4D16-A264-9F39FFDE3E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063C4305-071C-4D16-A264-9F39FFDE3E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22084AF-883C-4500-8282-2A5CDF4C8C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22084AF-883C-4500-8282-2A5CDF4C8C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22084AF-883C-4500-8282-2A5CDF4C8C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22084AF-883C-4500-8282-2A5CDF4C8C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D31508-803A-4F8D-97D2-73F7D6A0A451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D31508-803A-4F8D-97D2-73F7D6A0A451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D31508-803A-4F8D-97D2-73F7D6A0A451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D31508-803A-4F8D-97D2-73F7D6A0A451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B45077C-0A80-4F92-94DE-C161D4CBC3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B45077C-0A80-4F92-94DE-C161D4CBC3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B45077C-0A80-4F92-94DE-C161D4CBC3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B45077C-0A80-4F92-94DE-C161D4CBC3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B1AA27-5957-44C0-8AAC-22FB06803A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B1AA27-5957-44C0-8AAC-22FB06803A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B1AA27-5957-44C0-8AAC-22FB06803A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B1AA27-5957-44C0-8AAC-22FB06803A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E990CCB3-EC51-4D46-9F1C-5910C6ACEEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E990CCB3-EC51-4D46-9F1C-5910C6ACEEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E990CCB3-EC51-4D46-9F1C-5910C6ACEEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E990CCB3-EC51-4D46-9F1C-5910C6ACEEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

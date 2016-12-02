@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Listening" xml:space="preserve">
+    <value>Listening</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="Reading" xml:space="preserve">
+    <value>Reading</value>
+  </data>
+  <data name="RPA" xml:space="preserve">
+    <value>Paragraph &amp; answer</value>
+  </data>
+  <data name="RPQA" xml:space="preserve">
+    <value>Paragraph, question &amp; answer</value>
+  </data>
+  <data name="RQA" xml:space="preserve">
+    <value>Question &amp; answer</value>
+  </data>
+  <data name="Writing" xml:space="preserve">
+    <value>Writing</value>
+  </data>
+  <data name="QuestionDetail" xml:space="preserve">
+    <value>Question detail</value>
+  </data>
+  <data name="QuestionList" xml:space="preserve">
+    <value>Question list</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ParagraphDetail" xml:space="preserve">
+    <value>Paragraph detail</value>
+  </data>
+  <data name="ParagraphList" xml:space="preserve">
+    <value>Paragraph list</value>
+  </data>
+  <data name="SubType" xml:space="preserve">
+    <value>Sub type</value>
+  </data>
+  <data name="ClosePage" xml:space="preserve">
+    <value>Close current page</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="CanMixAnswer" xml:space="preserve">
+    <value>Can mix answer</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>Purpose</value>
+  </data>
+  <data name="TimeDone" xml:space="preserve">
+    <value>Time done</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="AnswerA" xml:space="preserve">
+    <value>A.</value>
+  </data>
+  <data name="AnswerB" xml:space="preserve">
+    <value>B.</value>
+  </data>
+  <data name="AnswerC" xml:space="preserve">
+    <value>C.</value>
+  </data>
+  <data name="AnswerD" xml:space="preserve">
+    <value>D.</value>
+  </data>
+  <data name="ActionAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ActionCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ActionDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ActionSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="AddEditQuestionAnswer" xml:space="preserve">
+    <value>Add/Edit question</value>
+  </data>
+  <data name="AnswerList" xml:space="preserve">
+    <value>Answer list</value>
+  </data>
+  <data name="WWB" xml:space="preserve">
+    <value>Fill in blank with words</value>
+  </data>
+  <data name="WWP" xml:space="preserve">
+    <value>Write a paragraph with the subject</value>
+  </data>
+  <data name="WWS" xml:space="preserve">
+    <value>Writing with sentence.
+Ex: The manager drives an expensive car
+-&gt; The expensive car is driven by the manager</value>
+  </data>
+  <data name="WWW" xml:space="preserve">
+    <value>Writing with words.
+Ex: It/kind/you/invite/us
+-&gt; It's very kind of you to invite us</value>
+  </data>
+  <data name="AudioPath" xml:space="preserve">
+    <value>Audio folder path</value>
+  </data>
+  <data name="AListeningSession1" xml:space="preserve">
+    <value>Session I. Listen to the recording and decide whether each statement is TRUE of FALSE. Write TRUE or FALSE in the space given in the answer sheet.</value>
+  </data>
+  <data name="AListeningSession2" xml:space="preserve">
+    <value>Session II. Listen to the recording and choose the best option (A, B, C or D) to fill in each blank.</value>
+  </data>
+  <data name="AListeningSession3" xml:space="preserve">
+    <value>Session III. Listeng to the recording and give short answer to the following questions.</value>
+  </data>
+  <data name="ATitleSection1" xml:space="preserve">
+    <value>Choose the word or phrase that best completes the sentence.</value>
+  </data>
+  <data name="ATitleSection2" xml:space="preserve">
+    <value>Choose the item (A, B, C or D) that best completes the unfinished statement or answers the question about the passage.</value>
+  </data>
+  <data name="ATitleSection3" xml:space="preserve">
+    <value>Choose the item (A, B, C or D) that best fits the blank space.</value>
+  </data>
+  <data name="ATitleSection4A" xml:space="preserve">
+    <value>Make all necessary changes and additions to produce a complete sentence from each of the following sets of words and phrases.</value>
+  </data>
+  <data name="ATitleSection4B" xml:space="preserve">
+    <value>Complete the unfinished sentence in such a way that it means the same as the sentence printed before it.</value>
+  </data>
+  <data name="BListeningSessionA" xml:space="preserve">
+    <value>Session I. Listen to the recording and decide whether each statement is TRUE of FALSE. Write TRUE or FALSE in the space given in the answer sheet.</value>
+  </data>
+  <data name="BListeningSessionB" xml:space="preserve">
+    <value>Session II. Listen to the recording and choose the best option (A, B, C or D) to fill in each blank.</value>
+  </data>
+  <data name="BListeningSessionC" xml:space="preserve">
+    <value>Session III. Listeng to the recording and give short answer to the following questions.</value>
+  </data>
+  <data name="BSectionA" xml:space="preserve">
+    <value>In this session you must choose the word or phrase which best completes each underlined word or phrase or choose the word or phrase with best completes each sentence.</value>
+  </data>
+  <data name="BSectionB" xml:space="preserve">
+    <value>Read the passage and choose the best answer.</value>
+  </data>
+  <data name="BSectionC" xml:space="preserve">
+    <value>Fill in the gaps with the most suitable words.</value>
+  </data>
+  <data name="BSectionD" xml:space="preserve">
+    <value>Sentence transformation.</value>
+  </data>
+  <data name="BSectionE" xml:space="preserve">
+    <value>Write a composition from 100 to 120 words on the specific/given topic.</value>
+  </data>
+  <data name="CListeningSession1" xml:space="preserve">
+    <value>Part 1: Listen to recording and fill in each gap the word you've heard.</value>
+  </data>
+  <data name="CListeningSession2" xml:space="preserve">
+    <value>Part 2: Listen to the recording and write T (True) or F (False) on the underlined part.</value>
+  </data>
+  <data name="CListeningSession3" xml:space="preserve">
+    <value>Part 3: Listen to the recording about the questions that the people are asked about their jobs. Write one question that each person is asked.</value>
+  </data>
+  <data name="CRTitleSectionA" xml:space="preserve">
+    <value>In this session you must choose the word or phrase which best completes each sentence. For each question, indicate the letter A, B, C or D againt the number of the question.</value>
+  </data>
+  <data name="CRTitleSectionB" xml:space="preserve">
+    <value>In this session you find after the passage some question of unfinished statements about the passage, each with four suggested answers or ways of finishing. You must choose the one which you think fits best. For each question, indicate the letter A, B, C or D againt the number of the question.</value>
+  </data>
+  <data name="CWSectionA" xml:space="preserve">
+    <value>WRITING
+SECTION A
+USE OF ENGLISH</value>
+  </data>
+  <data name="CWTitleSectionAA" xml:space="preserve">
+    <value>A. Fill each of the numbered blanks in the following passage. Use only ONE word in each space.</value>
+  </data>
+  <data name="CWTitleSectionAB" xml:space="preserve">
+    <value>B. GUILD SENTENCE BUILDING.
+Building a complete sentence with the given words.</value>
+  </data>
+  <data name="CWTitleSectionAC" xml:space="preserve">
+    <value>C. Rewrite the following sentences without changing their original meaning. Begin with the given words.</value>
+  </data>
+  <data name="CWTitleSectionB" xml:space="preserve">
+    <value>Write a composition from 80 to 120 words on the topic.</value>
+  </data>
+  <data name="ListeningComprehension" xml:space="preserve">
+    <value>LISTENING COMPREHENSION</value>
+  </data>
+  <data name="ComposeTest" xml:space="preserve">
+    <value>Compose Test</value>
+  </data>
+  <data name="LevelA" xml:space="preserve">
+    <value>Level A</value>
+  </data>
+  <data name="LevelB" xml:space="preserve">
+    <value>Level B</value>
+  </data>
+  <data name="LevelB1" xml:space="preserve">
+    <value>Level B1</value>
+  </data>
+  <data name="LevelB2" xml:space="preserve">
+    <value>Level B2</value>
+  </data>
+  <data name="LevelC" xml:space="preserve">
+    <value>Level C</value>
+  </data>
+  <data name="ALSection1" xml:space="preserve">
+    <value>Section I</value>
+  </data>
+  <data name="ALSection2" xml:space="preserve">
+    <value>Section II</value>
+  </data>
+  <data name="ALSection3" xml:space="preserve">
+    <value>Section III</value>
+  </data>
+  <data name="ARSection1" xml:space="preserve">
+    <value>Section I</value>
+  </data>
+  <data name="ARSection2" xml:space="preserve">
+    <value>Section II</value>
+  </data>
+  <data name="ARSection3" xml:space="preserve">
+    <value>Section III</value>
+  </data>
+  <data name="ARSection4A" xml:space="preserve">
+    <value>Section IV - A</value>
+  </data>
+  <data name="ARSection4B" xml:space="preserve">
+    <value>Section IV - B</value>
+  </data>
+  <data name="BTitleSection1" xml:space="preserve">
+    <value>Section A</value>
+  </data>
+  <data name="BTitleSection2" xml:space="preserve">
+    <value>Section B</value>
+  </data>
+  <data name="BTitleSection3" xml:space="preserve">
+    <value>Section C</value>
+  </data>
+  <data name="BTitleSection4" xml:space="preserve">
+    <value>Section D</value>
+  </data>
+  <data name="BTitleSection5" xml:space="preserve">
+    <value>Section E</value>
+  </data>
+  <data name="CLSection1" xml:space="preserve">
+    <value>Part 1</value>
+  </data>
+  <data name="CLSection2" xml:space="preserve">
+    <value>Part 2</value>
+  </data>
+  <data name="CLSection3" xml:space="preserve">
+    <value>Part 3</value>
+  </data>
+  <data name="CRSectionA" xml:space="preserve">
+    <value>Section A</value>
+  </data>
+  <data name="CRSectionB" xml:space="preserve">
+    <value>Section B</value>
+  </data>
+  <data name="CWSection1A" xml:space="preserve">
+    <value>Section A - A</value>
+  </data>
+  <data name="CWSection1B" xml:space="preserve">
+    <value>Section A - B</value>
+  </data>
+  <data name="CWSection1C" xml:space="preserve">
+    <value>Section A - C</value>
+  </data>
+  <data name="CWSection2" xml:space="preserve">
+    <value>Section B</value>
+  </data>
+  <data name="GenerateTest" xml:space="preserve">
+    <value>Generate Test</value>
+  </data>
+  <data name="ChooseClass" xml:space="preserve">
+    <value>Choose class</value>
+  </data>
+  <data name="ChooseLevel" xml:space="preserve">
+    <value>Choose level</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="TestName" xml:space="preserve">
+    <value>Test name</value>
+  </data>
+  <data name="TotalQuestion" xml:space="preserve">
+    <value>Total question</value>
+  </data>
+  <data name="TotalTime" xml:space="preserve">
+    <value>Total time</value>
+  </data>
+  <data name="ConfigAudioFilePath" xml:space="preserve">
+    <value>Audio path</value>
+  </data>
+  <data name="GeneralSetting" xml:space="preserve">
+    <value>General setting</value>
+  </data>
+  <data name="SectionTitle" xml:space="preserve">
+    <value>Insert section title</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ChooseManual" xml:space="preserve">
+    <value>Choose Manual</value>
+  </data>
+  <data name="NumberOfQuestion" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="TestInfo" xml:space="preserve">
+    <value>Test information</value>
+  </data>
+  <data name="TestInfoClass" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="TestInfoLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="TestInfoName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TestInfoNumOfSubTest" xml:space="preserve">
+    <value>SubTests</value>
+  </data>
+  <data name="TestInfoPurpose" xml:space="preserve">
+    <value>Purpose</value>
+  </data>
+  <data name="TestInfoTotalQuestion" xml:space="preserve">
+    <value>Total question</value>
+  </data>
+  <data name="TestInfoTotalTime" xml:space="preserve">
+    <value>Total time</value>
+  </data>
+  <data name="ChoosePurpose" xml:space="preserve">
+    <value>Choose purpose</value>
+  </data>
+  <data name="TestInfoTestDate" xml:space="preserve">
+    <value>Test date</value>
+  </data>
+  <data name="ATitleListeningSection1" xml:space="preserve">
+    <value>Listen to the recording and decide whether each statement is TRUE of FLASE. Write TRUE or FALSE in the space given in the answer sheet.</value>
+  </data>
+  <data name="ATitleListeningSection2" xml:space="preserve">
+    <value>Listen to the recording and choose the best option (A, B, or C) to fill each blank.</value>
+  </data>
+  <data name="ATitleListeningSection3" xml:space="preserve">
+    <value>Listen to the recording and give short answers to the following questions.</value>
+  </data>
+  <data name="GenerateWebTest" xml:space="preserve">
+    <value>Generate web test</value>
+  </data>
+  <data name="CLTitle1" xml:space="preserve">
+    <value>Part 1: Listen to the recording and fill in each gap the word you're heard.</value>
+  </data>
+  <data name="CLTitle2" xml:space="preserve">
+    <value>Part 2: Listen to the recording and write T (True) or F (False) on the underline part.</value>
+  </data>
+  <data name="CLTitle3" xml:space="preserve">
+    <value>Part 3:Listen to the recording about the questions that the people are asked about their job. Write one question that each person is asked.</value>
+  </data>
+  <data name="B1LSection1" xml:space="preserve">
+    <value>Part 1</value>
+  </data>
+  <data name="B1LSection2" xml:space="preserve">
+    <value>Part 2</value>
+  </data>
+  <data name="B1LSection3" xml:space="preserve">
+    <value>Part 3</value>
+  </data>
+  <data name="B1LSection4" xml:space="preserve">
+    <value>Part 4</value>
+  </data>
+  <data name="B1RSection1" xml:space="preserve">
+    <value>Part 1</value>
+  </data>
+  <data name="B1RSection2" xml:space="preserve">
+    <value>Part 2</value>
+  </data>
+  <data name="B1RSection3" xml:space="preserve">
+    <value>Part 3</value>
+  </data>
+  <data name="B1RSection4" xml:space="preserve">
+    <value>Part 4</value>
+  </data>
+  <data name="B1RSection5" xml:space="preserve">
+    <value>Part 5</value>
+  </data>
+  <data name="B1WSection1" xml:space="preserve">
+    <value>Part 1</value>
+  </data>
+  <data name="B1WSection2" xml:space="preserve">
+    <value>Part 2</value>
+  </data>
+  <data name="B1WSection3" xml:space="preserve">
+    <value>Part 3</value>
+  </data>
+  <data name="KeyTemplate" xml:space="preserve">
+    <value>Key template</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ConfigB1B2" xml:space="preserve">
+    <value>Config Template</value>
+  </data>
+  <data name="UpToServer" xml:space="preserve">
+    <value>Synchronize to server</value>
+  </data>
+  <data name="TestInfoIsGuess" xml:space="preserve">
+    <value>Guess test</value>
+  </data>
+  <data name="ALToolTip1" xml:space="preserve">
+    <value>Listen to the recording and decide whether each statement is TRUE or FALSE. Write TRUE or FALSE in the space given in the answer sheet.</value>
+  </data>
+  <data name="ALToolTip2" xml:space="preserve">
+    <value>Listen to the recording and choose the best option (A, B or C) to fill in each blank.</value>
+  </data>
+  <data name="ALToolTip3" xml:space="preserve">
+    <value>Listen to the recording and give short answers to the following questions.</value>
+  </data>
+  <data name="ARToolTip1" xml:space="preserve">
+    <value>Choose the word or phrase that best completes the sentence.</value>
+  </data>
+  <data name="ARToolTip2" xml:space="preserve">
+    <value>Choose the item (A, B, C, or D) that best completes the unfinished statement or answers the question about the passage</value>
+  </data>
+  <data name="ARToolTip3" xml:space="preserve">
+    <value>Choose the word or phrase (A, B, C, or D) that best fits the blank space.</value>
+  </data>
+  <data name="ARToolTip4A" xml:space="preserve">
+    <value>Make all necessary changes and additions to produce a complete sentence from each of the following sets of words and phrases</value>
+  </data>
+  <data name="ARToolTip4B" xml:space="preserve">
+    <value>Complete the unfinished sentence in such a way that it means the same as the sentence printed before it.</value>
+  </data>
+  <data name="B1LToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1LToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1LToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1LToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1RToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1RToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1RToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1RToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1RToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1WToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1WToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B1WToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BRToolTip1" xml:space="preserve">
+    <value>In this section you must choose the word or phrase which best completes each underlined word or phrase or choose the word or phrase which best completes each sentence.</value>
+  </data>
+  <data name="BRToolTip2" xml:space="preserve">
+    <value>Read the passage and choose the best answer.</value>
+  </data>
+  <data name="BRToolTip3" xml:space="preserve">
+    <value>Fill in the gaps with the most suitable words.</value>
+  </data>
+  <data name="BRToolTip4" xml:space="preserve">
+    <value>Sentence transformation.</value>
+  </data>
+  <data name="BRToolTip5" xml:space="preserve">
+    <value>Write a composition from 100 to 120 words on the specific/given topic.</value>
+  </data>
+  <data name="CLToolTip1" xml:space="preserve">
+    <value>Listen to the recording and fill in each gap the word you've heard.</value>
+  </data>
+  <data name="CLToolTip2" xml:space="preserve">
+    <value>Listen to the recording and write T (True) or F (False) on the underlined part.</value>
+  </data>
+  <data name="CLToolTip3" xml:space="preserve">
+    <value>Listen to the recording.</value>
+  </data>
+  <data name="CRToolTip1" xml:space="preserve">
+    <value>In this section you must choose the word or phrase which best completes each sentence. For each question, indicate the letter A, B, C, or D against the number of the question.</value>
+  </data>
+  <data name="CRToolTip2" xml:space="preserve">
+    <value>In this section you will find after the passage give questions of unfinished statements about the passage, each with four suggested answers or ways of finishing. You must choose the one which you think fits best.</value>
+  </data>
+  <data name="CWToolTip1" xml:space="preserve">
+    <value>Fill each of the numbered blanks in the following passage. Use only ONE word in each space.</value>
+  </data>
+  <data name="CWToolTip2" xml:space="preserve">
+    <value>Building a complete sentence with the given words.</value>
+  </data>
+  <data name="CWToolTip3" xml:space="preserve">
+    <value>Rewrite the following sentences without changing their original meaning. Begin with the given words.</value>
+  </data>
+  <data name="BRSection1" xml:space="preserve">
+    <value>Section 1</value>
+  </data>
+  <data name="BRSection2" xml:space="preserve">
+    <value>Section 2</value>
+  </data>
+  <data name="BRSection3" xml:space="preserve">
+    <value>Section 3</value>
+  </data>
+  <data name="BRSection4" xml:space="preserve">
+    <value>Section 4</value>
+  </data>
+  <data name="BRSection5" xml:space="preserve">
+    <value>Section 5</value>
+  </data>
+  <data name="ViewResult" xml:space="preserve">
+    <value>View result</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="TestContent" xml:space="preserve">
+    <value>Test content</value>
+  </data>
+  <data name="TestList" xml:space="preserve">
+    <value>Test list</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+</root>

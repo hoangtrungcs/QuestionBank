@@ -1,0 +1,90 @@
+﻿<generate:GenerateBasePage x:Class="EnglishQuestion.MainApp.Controls.Generate.GenerateContainer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:generate="clr-namespace:EnglishQuestion.MainApp.Controls.Generate"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+             lex:ResxLocalizationProvider.DefaultDictionary="MainResource">
+    <Grid Margin="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderBrush="CadetBlue" BorderThickness="2" DataContext="{Binding GenerateConfig}">
+            <StackPanel Orientation="Vertical">
+                <Border BorderBrush="DarkBlue" BorderThickness="1" Margin="5">
+                    <TextBlock Text="{lex:Loc Generate}" Foreground="DarkRed" FontSize="30" Background="#E0E7FF"/>
+                </Border>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{lex:Loc TestInfoName}" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Grid.Column="2" Grid.Row="1" MinWidth="150" Text="{Binding TestName}"/>
+                    <TextBlock Text="{lex:Loc ChooseClass}" Grid.Column="0" Grid.Row="3"/>
+                    <telerik:RadComboBox Grid.Column="2" Grid.Row="3" MinWidth="150"
+                                         SelectedValuePath="Key" DisplayMemberPath="Value"
+                                         SelectedValue="{Binding ClassNo}"
+                                         ItemsSource="{Binding Classes}"/>
+                    <TextBlock Text="{lex:Loc ChooseLevel}" Grid.Column="0" Grid.Row="5"/>
+                    <telerik:RadComboBox Grid.Column="2" Grid.Row="5" MinWidth="150"
+                                         SelectedValuePath="Key" DisplayMemberPath="Value"
+                                         SelectedValue="{Binding TestLevel}"
+                                         ItemsSource="{Binding TestLevels}"/>
+                    <TextBlock Text="{lex:Loc ChoosePurpose}" Grid.Column="0" Grid.Row="7"/>
+                    <telerik:RadComboBox Grid.Column="2" Grid.Row="7" MinWidth="150"
+                                         SelectedValuePath="Key" DisplayMemberPath="Value"
+                                         SelectedValue="{Binding Purpose}"
+                                         ItemsSource="{Binding Purposes}"/>
+                    <TextBlock Text="{lex:Loc TestInfoTotalTime}" Grid.Column="0" Grid.Row="9"/>
+                    <telerik:RadNumericUpDown Grid.Column="2" Grid.Row="9" IsInteger="True" MinWidth="150" Value="{Binding TotalTime}"/>
+                    <TextBlock Text="{lex:Loc TestInfoTotalQuestion}" Grid.Column="0" Grid.Row="11"/>
+                    <TextBox Grid.Column="2" Grid.Row="11" IsReadOnly="True" MinWidth="150" Text="{Binding TotalQuestion}"/>
+                    <TextBlock Text="{lex:Loc TestInfoNumOfSubTest}" Grid.Column="0" Grid.Row="13"/>
+                    <telerik:RadNumericUpDown Grid.Column="2" Grid.Row="13" IsInteger="True" MinWidth="150" Minimum="0" Value="{Binding NumOfSubTests}"/>
+                    <TextBlock Text="{lex:Loc TestInfoTestDate}" Grid.Column="0" Grid.Row="15"/>
+                    <telerik:RadDateTimePicker Grid.Column="2" Grid.Row="15" SelectedValue="{Binding TestDate, Mode=TwoWay}"/>
+                    <TextBlock Text="{lex:Loc TestInfoIsGuess}" Grid.Column="0" Grid.Row="17"/>
+                    <CheckBox Grid.Column="2" Grid.Row="17" IsChecked="{Binding IsGuess, Mode=TwoWay}"/>
+                    <telerik:RadButton Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="19" Content="{lex:Loc Generate}" Height="60" Click="OnGenerateTestClick"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" BorderBrush="CadetBlue" BorderThickness="2" Margin="5,0,5,0" DataContext="{Binding ConfigLevels}">
+            <StackPanel Orientation="Vertical">
+                <Border BorderBrush="DarkBlue" BorderThickness="1" Margin="5">
+                    <TextBlock Text="{lex:Loc Configuration}" Foreground="DarkRed" FontSize="30" Background="#E0E7FF"/>
+                </Border>
+                <Grid x:Name="generateLevelContainer"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</generate:GenerateBasePage>

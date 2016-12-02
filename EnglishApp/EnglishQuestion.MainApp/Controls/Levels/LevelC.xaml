@@ -1,0 +1,41 @@
+﻿<base:LevelBasePage x:Class="EnglishQuestion.MainApp.Controls.Levels.LevelC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:wpfPageTransitions="clr-namespace:WpfPageTransitions;assembly=WpfPageTransitions"
+             xmlns:base="clr-namespace:EnglishQuestion.MainApp.Controls.Levels"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+             lex:ResxLocalizationProvider.DefaultDictionary="MainResource">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Background="#E0E7FF">
+            <telerik:RadExpander Header="{lex:Loc Reading}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Padding="0,5,0,5">
+                <StackPanel Orientation="Vertical">
+                    <telerik:RadRadioButton Tag="CR1" Content="{lex:Loc CRSection1}" Background="White" BorderBrush="Black" BorderThickness="1" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CRToolTip1}"/>
+                    <telerik:RadRadioButton Tag="CR2" Content="{lex:Loc CRSection2}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CRToolTip2}"/>
+                </StackPanel>
+            </telerik:RadExpander>
+            <telerik:RadExpander Header="{lex:Loc Writing}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Padding="0,5,0,5">
+                <StackPanel Orientation="Vertical">
+                    <telerik:RadRadioButton Tag="CW1A" Content="{lex:Loc CWSection1A}" Background="White" BorderBrush="Black" BorderThickness="1" GroupName="levelC" ToolTip="{lex:Loc BRToolTip1}"/>
+                    <telerik:RadRadioButton Tag="CW1B" Content="{lex:Loc CWSection1B}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CWToolTip1}"/>
+                    <telerik:RadRadioButton Tag="CW1C" Content="{lex:Loc CWSection1C}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CWToolTip2}"/>
+                    <telerik:RadRadioButton Tag="CW2" Content="{lex:Loc CWSection2}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CWToolTip3}"/>
+                </StackPanel>
+            </telerik:RadExpander>
+            <telerik:RadExpander Header="{lex:Loc Listening}" BorderBrush="CadetBlue" BorderThickness="1" FontSize="16" Padding="0,5,0,5">
+                <StackPanel Orientation="Vertical">
+                    <telerik:RadRadioButton Tag="CL1" Content="{lex:Loc CLSection1}" Background="White" BorderBrush="Black" BorderThickness="1" GroupName="levelC" ToolTip="{lex:Loc CLToolTip1}"/>
+                    <telerik:RadRadioButton Tag="CL2" Content="{lex:Loc CLSection2}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CLToolTip2}"/>
+                    <telerik:RadRadioButton Tag="CL3" Content="{lex:Loc CLSection3}" Background="White" BorderBrush="Black" BorderThickness="1" Margin="0,-1,0,0" GroupName="levelC" Checked="OnSectionChecked" ToolTip="{lex:Loc CLToolTip3}"/>
+                </StackPanel>
+            </telerik:RadExpander>
+        </StackPanel>
+        <wpfPageTransitions:PageTransition Grid.Column="1" x:Name="pageTransition" TransitionType="Fade"/>
+    </Grid>
+</base:LevelBasePage>

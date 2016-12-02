@@ -1,0 +1,192 @@
+﻿<!--
+=========================================================================================================
+  Module      : Listening question answer page (ListeningQuestionAnswer.xaml)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright   : Copyright T3. 2015 All Rights Reserved.
+=========================================================================================================
+-->
+<base:ComposeBasePage
+    x:Class="EnglishQuestion.MainApp.Controls.Compose.Listening1QA"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:telerikControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+    lex:ResxLocalizationProvider.DefaultDictionary="MainResource"
+    xmlns:base="clr-namespace:EnglishQuestion.MainApp.Controls.Compose"
+    xmlns:extend="clr-namespace:HtmlEditorExtend.Views;assembly=HtmlEditorExtend"
+    xmlns:player="clr-namespace:WindowMediaPayerWrapper;assembly=WindowMediaPayerWrapper">
+    <telerik:RadDocking>
+        <!-- Detail -->
+        <telerik:RadDocking.DocumentHost>
+            <telerik:RadSplitContainer>
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="{lex:Loc ParagraphDetail}" CanFloat="False" CanUserClose="False"
+                                     DataContext="{Binding Current}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!-- Content -->
+                            <telerik:GroupBox Header="{lex:Loc Paragraph}" Grid.Column="0" Grid.Row="0" Padding="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <player:WpfWmpWrapper Url="{Binding FileInfo, Mode=TwoWay}"/>
+                                    <extend:HtmlEditor BindingContent="{Binding Content, Mode=TwoWay}" Grid.Row="1" DocumentReady="OnEditorDocumentReady"/>
+                                </Grid>
+                            </telerik:GroupBox>
+                            <!-- Question list -->
+                            <telerik:GroupBox Header="{lex:Loc QuestionList}" Grid.Column="0" Grid.Row="1" Padding="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <telerik:RadButton ContentTemplate="{StaticResource AddButton}" Grid.Row="0" Click="OnAddQuestion"/>
+                                    <telerik:RadGridView Name="dgvQuestions" IsReadOnly="True" AutoGenerateColumns="False"
+                                                         telerikControls:StyleManager.Theme="Windows7" Grid.Row="1"
+                                                         ItemsSource="{Binding Questions}">
+                                        <telerik:RadGridView.Resources>
+                                            <DataTemplate x:Key="ActionButton">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                    <telerik:RadButton CommandParameter="{Binding UniqueKey}" ContentTemplate="{StaticResource EditButton}" Click="OnEditGridItem"/>
+                                                    <telerik:RadButton CommandParameter="{Binding UniqueKey}" ContentTemplate="{StaticResource RemoveButton}" Click="OnDeleteGridItem"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </telerik:RadGridView.Resources>
+                                        <telerik:RadGridView.Columns>
+                                            <telerik:GridViewDataColumn DataMemberBinding="{Binding Title}" Header="{lex:Loc Content}" Width="*"/>
+                                            <telerik:GridViewDataColumn DataMemberBinding="{Binding UniqueKey}" CellTemplate="{StaticResource ActionButton}"
+                                                                    Header="{lex:Loc Action}"/>
+                                        </telerik:RadGridView.Columns>
+                                    </telerik:RadGridView>
+                                </Grid>
+                            </telerik:GroupBox>
+                            <!-- Setting -->
+                            <telerik:GroupBox Header="{lex:Loc Setting}" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Padding="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="{lex:Loc Level}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"/>
+                                    <telerik:RadComboBox Grid.Column="2" Grid.Row="0" Width="100"
+                                                         Name="cbbSettingLevel" HorizontalAlignment="Left"
+                                                         SelectedValuePath="Key" DisplayMemberPath="Value"
+                                                         SelectedValue="{Binding Level}"/>
+                                    <TextBlock Text="{lex:Loc Purpose}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center"/>
+                                    <telerik:RadComboBox Grid.Column="2" Grid.Row="2" Width="100"
+                                                         Name="cbbSettingPurpose" HorizontalAlignment="Left"
+                                                         SelectedValuePath="Key" DisplayMemberPath="Value"
+                                                         SelectedValue="{Binding Purpose}"/>
+                                    <TextBlock Text="{lex:Loc TimeDone}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center"/>
+                                    <telerik:RadNumericUpDown Grid.Column="2" Grid.Row="4" Minimum="1" Width="100"
+                                                              NumberDecimalDigits="0" HorizontalAlignment="Left"
+                                                              Value="{Binding TimeDone}"/>
+                                    <TextBlock Grid.Column="0" Grid.Row="6" Text="{lex:Loc SubType}" VerticalAlignment="Center"/>
+                                    <Grid Grid.Column="2" Grid.Row="6" Margin="0,5,0,5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Row="0" Grid.Column="0" Content="A" IsChecked="{Binding TestLevel, Converter={StaticResource SubTypeToBool}, ConverterParameter=A}" Margin="0,0,20,0"/>
+                                        <CheckBox Grid.Row="0" Grid.Column="1" Content="B" IsChecked="{Binding TestLevel, Converter={StaticResource SubTypeToBool}, ConverterParameter=B}" Margin="0,0,20,0"/>
+                                        <CheckBox Grid.Row="0" Grid.Column="2" Content="C" IsChecked="{Binding TestLevel, Converter={StaticResource SubTypeToBool}, ConverterParameter=C}"/>
+                                        <CheckBox Grid.Row="1" Grid.Column="0" Content="B1" IsChecked="{Binding TestLevel, Converter={StaticResource SubTypeToBool}, ConverterParameter=B1}" Margin="0,0,20,0"/>
+                                        <CheckBox Grid.Row="1" Grid.Column="1" Content="B2" IsChecked="{Binding TestLevel, Converter={StaticResource SubTypeToBool}, ConverterParameter=B2}"/>
+                                    </Grid>
+                                </Grid>
+                            </telerik:GroupBox>
+                        </Grid>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+        </telerik:RadDocking.DocumentHost>
+        <!-- Search and list -->
+        <telerik:RadSplitContainer InitialPosition="DockedLeft" Width="400">
+            <telerik:RadPaneGroup>
+                <telerik:RadPane Header="{lex:Loc ParagraphList}" CanFloat="False" CanUserClose="False" CanDockInDocumentHost="False">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="135"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <telerik:GroupBox Header="{lex:Loc Search}" Grid.Row="0" DataContext="{Binding Search}" BorderBrush="DarkRed">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Text="{lex:Loc Content}" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="2" Grid.Row="0" Text="{Binding Content}"/>
+                                <TextBlock Grid.Column="0" Grid.Row="1" Text="{lex:Loc SubType}" VerticalAlignment="Center" Visibility="Collapsed"/>
+                                <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" Margin="0,5,0,5" Visibility="Collapsed">
+                                    <CheckBox Content="A" IsChecked="{Binding IsSubTypeA}" Margin="0,0,20,0"/>
+                                    <CheckBox Content="B" IsChecked="{Binding IsSubTypeB}" Margin="0,0,20,0"/>
+                                    <CheckBox Content="C" IsChecked="{Binding IsSubTypeC}" Margin="0,0,20,0"/>
+                                    <CheckBox Content="B1" IsChecked="{Binding IsSubTypeB1}" Margin="0,0,20,0"/>
+                                    <CheckBox Content="B2" IsChecked="{Binding IsSubTypeB2}"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="0" Grid.Row="2" Text="{lex:Loc CreatedDate}" VerticalAlignment="Center"/>
+                                <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
+                                    <telerik:RadDatePicker Name="dteSearchFrom" SelectedDate="{Binding From, Mode=TwoWay}" Margin="0,0,20,0"/>
+                                    <telerik:RadDatePicker Name="dteSearchTo" SelectedDate="{Binding To, Mode=TwoWay}"/>
+                                </StackPanel>
+                                <telerik:RadButton Grid.Column="0" Grid.Row="3"
+                                                   Name="btnSearch" Content="{lex:Loc Search}" Margin="0,5,0,0"
+                                                   Click="OnSearch"/>
+                            </Grid>
+                        </telerik:GroupBox>
+                        <telerik:GroupBox Header="{lex:Loc ParagraphList}" Grid.Row="2" BorderBrush="DarkRed">
+                            <telerik:RadGridView Name="dgvParagraphs" IsReadOnly="True"
+                                                 AutoGenerateColumns="False" ItemsSource="{Binding ItemsSource}"
+                                                 telerikControls:StyleManager.Theme="Windows7"
+                                                 SelectionChanged="OnGridViewSelectionChanged"
+                                                 RowLoaded="OnRowLoaded">
+                                <telerik:RadGridView.Columns>
+                                    <telerik:GridViewDataColumn DataMemberBinding="{Binding RowNumber, Mode=OneWay}" Header="#" TextAlignment="Right"/>
+                                    <telerik:GridViewDataColumn DataMemberBinding="{Binding FileName}" Header="{lex:Loc Content}" Width="*"/>
+                                    <telerik:GridViewDataColumn DataMemberBinding="{Binding TestLevel}" Header="{lex:Loc SubType}"/>
+                                </telerik:RadGridView.Columns>
+                            </telerik:RadGridView>
+                        </telerik:GroupBox>
+                    </Grid>
+                </telerik:RadPane>
+            </telerik:RadPaneGroup>
+        </telerik:RadSplitContainer>
+    </telerik:RadDocking>
+</base:ComposeBasePage>

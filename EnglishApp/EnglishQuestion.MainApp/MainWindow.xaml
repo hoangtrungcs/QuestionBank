@@ -1,0 +1,285 @@
+﻿<!--
+=========================================================================================================
+  Module      : Main window (MainWindow.xaml)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright   : Copyright T3. 2015 All Rights Reserved.
+=========================================================================================================
+-->
+<telerik:RadRibbonWindow
+    x:Class="EnglishQuestion.MainApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:wpfPageTransitions="clr-namespace:WpfPageTransitions;assembly=WpfPageTransitions"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    lex:LocalizeDictionary.DesignCulture="en"
+    lex:ResxLocalizationProvider.DefaultAssembly="EnglishQuestion.MainApp"
+    lex:ResxLocalizationProvider.DefaultDictionary="MainResource"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    Loaded="OnWindowLoaded"
+    Icon="mainicon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Ribbon view -->
+        <telerik:RadRibbonView Grid.Row="0" x:Name="radRibbonMain" ApplicationName="English Question" MinimizeButtonVisibility="Hidden" Height="120">
+            <telerik:RadRibbonView.QuickAccessToolBar>
+                <telerik:QuickAccessToolBar>
+                    <telerik:RadRibbonButton Name="btnAdd"
+                                             SmallImage="Images/small/action_add.png"
+                                             Size="Small" ToolTip="{lex:Loc ActionAdd}"
+                                             Click="OnRibbonButtonClick"/>
+                    <telerik:RadRibbonButton Name="btnCancel"
+                                             SmallImage="Images/small/action_cancel.png"
+                                             Size="Small" ToolTip="{lex:Loc ActionCancel}"
+                                             Click="OnRibbonButtonClick"/>
+                    <telerik:RadRibbonButton Name="btnSave"
+                                             SmallImage="Images/small/action_save.png"
+                                             Size="Small" ToolTip="{lex:Loc ActionSave}"
+                                             Click="OnRibbonButtonClick"/>
+                    <telerik:RadRibbonButton Name="btnDelete"
+                                             SmallImage="Images/small/action_delete.png"
+                                             Size="Small" ToolTip="{lex:Loc ActionDelete}"
+                                             Click="OnRibbonButtonClick"/>
+                    <telerik:RadRibbonButton Name="btnCloseCurrentPage" Visibility="Collapsed"
+                                             SmallImage="Images/small/close_current_page.png"
+                                             Size="Small" ToolTip="{lex:Loc ClosePage}"
+                                             Click="OnRibbonButtonClick"/>
+                </telerik:QuickAccessToolBar>
+            </telerik:RadRibbonView.QuickAccessToolBar>
+            <!-- Compose Question -->
+            <telerik:RadRibbonTab Header="{lex:Loc ComposeTest}">
+                <telerik:RadRibbonGroup Margin="0,0,0,20">
+                    <telerik:RadRibbonRadioButton
+                        Tag="CLevelA"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelA}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="CLevelB"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="CLevelC"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelC}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="CLevelB1"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB1}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="CLevelB2"
+                        IsAutoSize="False"
+                        Background="White"
+                        Size="Large"
+                        Text="{lex:Loc LevelB2}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+
+            <!-- Generate Question -->
+            <telerik:RadRibbonTab Header="{lex:Loc GenerateTest}">
+                <telerik:RadRibbonGroup Margin="0,0,0,20">
+                    <telerik:RadRibbonRadioButton
+                        Tag="GLevelA"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelA}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GLevelB"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GLevelC"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelC}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GLevelB1"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB1}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GLevelB2"
+                        IsAutoSize="False"
+                        Background="White"
+                        Size="Large"
+                        Text="{lex:Loc LevelB2}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+
+            <!-- Generate Choise Question -->
+            <telerik:RadRibbonTab Header="{lex:Loc GenerateWebTest}">
+                <telerik:RadRibbonGroup Margin="0,0,0,20">
+                    <telerik:RadRibbonRadioButton
+                        Tag="GcLevelA"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelA}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GcLevelB"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GcLevelC"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelC}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GcLevelB1"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc LevelB1}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="GcLevelB2"
+                        IsAutoSize="False"
+                        Background="White"
+                        Size="Large"
+                        Text="{lex:Loc LevelB2}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+
+            <!-- General setting -->
+            <telerik:RadRibbonTab Header="{lex:Loc GeneralSetting}">
+                <telerik:RadRibbonGroup Margin="0,0,0,20">
+                    <telerik:RadRibbonRadioButton
+                        Tag="SAudioFilePath"
+                        CollapseToMedium="Never"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc ConfigAudioFilePath}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                    <telerik:RadRibbonRadioButton
+                        Tag="SB1B2"
+                        CollapseToMedium="Never"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc ConfigB1B2}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnLevelClick"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+            
+            <!--<telerik:RadRibbonTab Header="{lex:Loc UpToServer}">
+                <telerik:RadRibbonGroup Margin="0,0,0,20">
+                    <telerik:RadRibbonButton
+                        Tag="Server"
+                        CollapseToMedium="Never"
+                        IsAutoSize="False"
+                        Background="White"
+                        Margin="0,0,-5,0"
+                        Size="Large"
+                        Text="{lex:Loc UpToServer}"
+                        FontSize="16"
+                        BorderThickness="1" BorderBrush="Black"
+                        Width="150" Height="50"
+                        Click="OnUpToServerClick"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>-->
+        </telerik:RadRibbonView>
+        <!-- Main content -->
+        <wpfPageTransitions:PageTransition Grid.Row="1" x:Name="pageTransition" TransitionType="Fade" Padding="5,0,5,0"/>
+        <!-- Bottom status -->
+    </Grid>
+</telerik:RadRibbonWindow>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="WindowMediaPayerWrapper.WpfWmpWrapper"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ax="clr-namespace:AxWMPLib;assembly=AxInterop.WMPLib">
+    <Grid>
+        <WindowsFormsHost>
+            <ax:AxWindowsMediaPlayer x:Name="wmplayer"/>
+        </WindowsFormsHost>
+    </Grid>
+</UserControl>

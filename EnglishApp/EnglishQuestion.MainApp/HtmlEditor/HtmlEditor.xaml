@@ -1,0 +1,21 @@
+﻿<Window x:Class="EnglishQuestion.MainApp.HtmlEditor.HtmlEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:extend="clr-namespace:HtmlEditorExtend.Views;assembly=HtmlEditorExtend"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="Editor"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <extend:HtmlEditor Name="Editor" BindingContent="{Binding HtmlContent, Mode=TwoWay}" Width="21cm"/>
+        <!-- Accept/Close button -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="0,0,0,5">
+            <telerik:RadButton ContentTemplate="{StaticResource AcceptButton}" Margin="0,0,10,0" Click="OnAcceptButtonClick"/>
+            <telerik:RadButton ContentTemplate="{StaticResource CancelButton}" Margin="0,0,10,0" Click="OnCancelButtonClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
